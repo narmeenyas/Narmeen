@@ -4,29 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    tools:context=".LoginActivity"
     android:orientation="vertical"
-    tools:context=".SignupActivity"
-    android:background="#0c1827"
-    android:padding="20dp">
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Started"
-        android:textColor="#ffffff"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up to continue"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="230dp"
@@ -34,7 +15,6 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:layout_marginTop="20dp"
         android:background="@drawable/roundstyle"
         android:padding="20px"
         />
@@ -48,20 +28,6 @@
         android:background="@drawable/roundstyle"
         android:padding="20px"
         android:inputType="textEmailAddress" />
-
-
-    <EditText
-        android:id="@+id/editTextTextPostalAddress"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:background="@drawable/roundstyle"
-        android:hint="Postal Address"
-        android:layout_marginTop="20dp"
-        app:cornerRadius="28dp"
-        android:padding="20px"
-        android:inputType="textPostalAddress" />
-
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="230dp"
@@ -73,16 +39,15 @@
         app:cornerRadius="28dp"
         android:padding="20px"
         android:inputType="textPassword" />
-
     <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="189dp"
+        android:id="@+id/buttonLogin"
+        android:layout_width="185dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#1a1a1a"
-        android:text="Sign Up"
-        android:onClick="submit"
-        app:cornerRadius="28dp"
-        android:textAllCaps="false" />
-
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#000000"
+        android:hint="login"
+        android:onClick="login"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        app:cornerRadius="28dp" />
 </LinearLayout>

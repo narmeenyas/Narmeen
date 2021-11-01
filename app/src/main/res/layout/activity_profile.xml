@@ -4,23 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    tools:context=".ProfileActivity"
     android:orientation="vertical"
-    tools:context=".Welcome">
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="15px"
-        android:text="Name" />
+    android:gravity="center"
+    >
 
     <Button
-        android:id="@+id/buttonBack"
+        android:id="@+id/buttonPicture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="back"
-        android:text="Button" />
+        android:text="Take picture" />
+
+    <Button
+        android:id="@+id/buttonGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Gallery" />
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/imageViewProfile"/>
 </LinearLayout>
