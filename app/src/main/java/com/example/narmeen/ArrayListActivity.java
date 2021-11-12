@@ -23,6 +23,7 @@ public class ArrayListActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array_list);
+        getSupportActionBar().hide();
         list=new ArrayList<>();
 
         list.add(new Item("my first item",R.drawable.img,true,50));

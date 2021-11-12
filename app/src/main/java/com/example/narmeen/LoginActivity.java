@@ -1,6 +1,7 @@
 package com.example.narmeen;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
         //findViewById returns reference to the object with the specified id
         editTextName= findViewById(R.id.editTextTextPersonName);
         editTextPassword= findViewById(R.id.editTextTextPassword);
+        editTextTextEmailAddress=findViewById(R.id.editTextTextEmailAddress);
         buttonLogin=findViewById(R.id.buttonLogin);
         //sets the required button to response long click, otherwise it won't
         buttonLogin.setOnLongClickListener(this);
@@ -53,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
 
     public void login(View view) {
 
-        Intent intent = new Intent(this,Welcome.class); // this allows us move to another page(welcome)
+        //Intent intent = new Intent(this,Welcome.class); // this allows us move to another page(welcome)
         if(!editTextName.getText().toString().equals("")&&
                 editTextTextEmailAddress.getText().toString().contains("@"))
         {
@@ -67,7 +69,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
             //save and close file
             editor.commit();
 
-            intent.putExtra("name", editTextName.getText().toString());
+         //   intent.putExtra("name", editTextName.getText().toString());
             login(editTextName.getText().toString(),editTextPassword.getText().toString());
             //startActivity(intent);
 
@@ -96,6 +98,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
                          Log.d(TAG, "signInWithEmail:success");
                          FirebaseUser user = mAuth.getCurrentUser();
                          Intent i=new Intent(LoginActivity.this,Welcome.class);
+                         startActivity(i);
                      } else {
                          // If sign in fails, display a message to the user.
                          Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -109,11 +112,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
              });
  }
     @Override
-    public void onClick(DialogInterface dialogInterface, int i) {
 
-    }
     public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure?");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes", this);
+        builder.setNegativeButton("No", this);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 
+    @Override
+    public void onClick(DialogInterface dialogInterface, int i) {
+        if(i == dialogInterface.BUTTON_POSITIVE){
+            super.onBackPressed();
+            dialogInterface.cancel();
+        }
+        if(i==dialogInterface.BUTTON_NEGATIVE){
+            dialogInterface.cancel();
+        }
     }
 
 }

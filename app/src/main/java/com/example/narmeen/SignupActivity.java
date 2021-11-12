@@ -20,21 +20,23 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     private EditText editTextEmailAddress,editTextTextPassword;
     private FirebaseAuth mAuth;
     private static final String TAG = "FIREBASE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         getSupportActionBar().hide();
         editTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
+        editTextTextPassword = findViewById(R.id.editTextTextPassword);
 
             //initialize firebase auth
             mAuth=FirebaseAuth.getInstance();//gets the instance of the firebase connected to the project firebase
-
 
     }
     public void submit(View view){
         signup(editTextEmailAddress.getText().toString(),editTextTextPassword.getText().toString());
     }
+
     public void signup (String email, String password){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -44,7 +46,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i = new Intent(SignupActivity.this,Welcome.class);
+                            Intent i = new Intent(SignupActivity.this, Welcome.class);
                             startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -61,5 +63,9 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
+    }
+    public void move(View view){
+        Intent intent = new Intent(this,LoginActivity.class);
+        startActivity(intent);
     }
 }

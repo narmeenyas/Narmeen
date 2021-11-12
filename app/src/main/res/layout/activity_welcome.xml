@@ -6,21 +6,34 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="#0c1827"
     tools:context=".Welcome">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="187dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="15px"
-        android:text="Name" />
+        android:text=""
+        android:drawableEnd="@drawable/ic_baseline_person_24"
+        android:textColor="#ffffff"
+        android:onClick="transition"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our app"
+        android:textColor="#ffffff"
+
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/buttonBack"
-        android:layout_width="match_parent"
+        android:layout_width="189dp"
         android:layout_height="wrap_content"
-        android:onClick="back"
-        android:text="Button" />
+        android:backgroundTint="#1a1a1a"
+        app:cornerRadius="28dp"
+        android:text="Button"
+        android:onClick="movetoIntro"/>
 </LinearLayout>

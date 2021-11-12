@@ -34,7 +34,7 @@ public class CustomAdapter extends ArrayAdapter <Item> {
         if (view == null) {
             view = LayoutInflater.from(context).inflate(resource, parent, false);
         }
-        Item item = getItem(position);//method from the android studio , not realted to item object
+        Item item = getItem(position);//method from the android studio , not related to item object
         if (item != null) {
             ImageView imageView = view.findViewById(R.id.imageItem);
             TextView textViewDescription = view.findViewById(R.id.textViewDesc);

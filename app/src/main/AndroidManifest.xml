@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Narmeen">
         <activity
-            android:name=".LoginActivity"
+            android:name=".SignupActivity"
             android:exported="true" />
         <activity
             android:name=".ProfileActivity"
@@ -25,13 +25,13 @@
             android:name=".IntroActivity"
             android:exported="true" />
         <activity
-            android:name=".PreviewActivity"
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".Welcome"
             android:exported="true" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".PreviewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

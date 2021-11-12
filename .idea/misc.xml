@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/drawable/mybutton.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/drawable/roundstyle.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_array_list.xml" value="0.2997393570807993" />
+        <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_array_list.xml" value="0.22" />
         <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_intro.xml" value="0.17889492753623187" />
-        <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
+        <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_preview.xml" value="0.22" />
         <entry key="..\:/Users/ahmad/AndroidStudioProjects/Narmeen/app/src/main/res/layout/activity_profile.xml" value="0.1796875" />
