@@ -25,16 +25,13 @@ public class Welcome extends AppCompatActivity {
     }
 
 
-    public void back(View view) {
-        Intent intent = new Intent(this,MainActivity.class); // this allows us move to another page
-        startActivity(intent);
-    }
+
     public void transition(View view){
         Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
     }
     public void movetoIntro(View view){
-        Intent intent = new Intent(this,LoginActivity.class);
+        Intent intent = new Intent(this,ProfileActivity.class);
         startActivity(intent);
     }
 }

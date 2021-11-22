@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Narmeen">
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".PreviewActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ProfileActivity"
             android:exported="true" />
         <activity
             android:name=".ArrayListActivity"
@@ -31,7 +36,7 @@
             android:name=".Welcome"
             android:exported="true" />
         <activity
-            android:name=".PreviewActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +44,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".myService"></service>
     </application>
 
 </manifest>

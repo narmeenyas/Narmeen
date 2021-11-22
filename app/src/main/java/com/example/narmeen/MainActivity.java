@@ -13,6 +13,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener, DialogInterface.OnClickListener {
     private EditText editTextName , editTextPassword,editTextTextEmailAddress;
     private Button buttonLogin;
+    private Intent musicIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         buttonLogin=findViewById(R.id.buttonLogin);
         //sets the required button to response long click, otherwise it won't
         buttonLogin.setOnLongClickListener(this);
+
+        //this will start the service which in turn will start the music
+        musicIntent= new Intent(this,MusicService.class);
+        startService(musicIntent);
 
         String name= editTextName.getText().toString();
 

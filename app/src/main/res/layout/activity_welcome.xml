@@ -25,7 +25,6 @@
         android:layout_height="wrap_content"
         android:text="Welcome to our app"
         android:textColor="#ffffff"
-
         android:textSize="40sp" />
 
     <Button
@@ -36,4 +35,5 @@
         app:cornerRadius="28dp"
         android:text="Button"
         android:onClick="movetoIntro"/>
+
 </LinearLayout>
