@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
         //returns a reference to the instance of the project firebase
         getSupportActionBar().hide();
