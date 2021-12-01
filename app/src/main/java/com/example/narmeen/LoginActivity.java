@@ -115,7 +115,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
              });
  }
     @Override
-
     public void onBackPressed(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Are you sure?");
@@ -136,6 +135,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnLongClick
             dialogInterface.cancel();
         }
     }
-
-
 }

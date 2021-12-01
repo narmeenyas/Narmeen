@@ -14,7 +14,8 @@
      android:layout_height="wrap_content"
      android:text="Welcome"
      android:textColor="#ffffff"
-     android:textSize="40sp" />
+     android:textSize="40sp"
+     android:textStyle="bold"/>
 
  <pl.droidsonroids.gif.GifImageView
 

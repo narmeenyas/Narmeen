@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="#1f007a"
+    android:background="#000066"
     android:orientation="vertical"
     android:gravity="center">
 
@@ -21,46 +21,57 @@
         />
 
     <EditText
+        android:drawableStart="@drawable/ic_outline_person_outline_24"
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="230dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint=" Name"
         android:inputType="textPersonName"
         android:background="@drawable/roundstyle"
         android:padding="20px"
+        android:textColorHint="#D9ffffff"
+        android:backgroundTint="#0000e6"
         />
+
     <EditText
+        android:drawableStart="@drawable/ic_outline_email_24"
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="230dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Email"
+        android:hint=" Email"
         android:layout_marginTop="20dp"
         android:background="@drawable/roundstyle"
         android:padding="20px"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textColorHint="#D9ffffff"
+        android:backgroundTint="#0000e6"/>
+
     <EditText
+        android:drawableStart="@drawable/ic_outline_lock_24"
         android:id="@+id/editTextTextPassword"
-        android:layout_width="230dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:background="@drawable/roundstyle"
-        android:hint="Password"
+        android:hint=" Password"
         android:layout_marginTop="20dp"
         app:cornerRadius="28dp"
         android:padding="20px"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColorHint="#D9ffffff"
+        android:backgroundTint="#0000e6"/>
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#000000"
+        android:backgroundTint="#ffaa00"
         android:hint="login"
         android:onClick="login"
-        android:text="Login"
-        android:textColor="@android:color/white"
+        android:text="LOGIN"
+        android:textColor="#0000e6"
         app:cornerRadius="28dp" />
 </LinearLayout>
