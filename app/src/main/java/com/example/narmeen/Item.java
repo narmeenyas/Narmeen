@@ -13,6 +13,10 @@ public class Item {
         this.amount = amount;
     }
 
+    public Item() {
+
+    }
+
     public String getDescription() {
         return description;
     }

@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
 
 public class ArrayListActivity extends AppCompatActivity  {
@@ -57,5 +59,22 @@ public class ArrayListActivity extends AppCompatActivity  {
             }
         });
     }
+
+
+    //realtime database continuing code
+    private FirebaseAuth maFirebaseAuth = FirebaseAuth.getInstance();
+    FirebaseDatabase database = FirebaseDatabase.getInstance("https://sanctum-bc758-default-rtdb.europe-west1.firebasedatabase.app/");
+    String UID = maFirebaseAuth.getUid();
+    DatabaseReference myRef = database.getReference("users/"+UID);
+
+    //todo change this into the object you need to use (reminder / appointemnt)
+        myRef.push().setValue(new Item(2,true,"this is my first item",7));
+
+     //realtime data base can be used to add data that is custom to each use(in your case the
+     //user could add courses that he wants to learn)
+    myRef.addValueEventListener(new )
+
+
+
 
 }
