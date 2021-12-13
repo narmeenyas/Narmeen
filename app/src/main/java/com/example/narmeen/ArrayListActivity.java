@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -20,12 +22,27 @@ public class ArrayListActivity extends AppCompatActivity  {
     private CustomAdapter myAdapter;
     //object containing the items to be displayed - Data
     private ArrayList<Item> list;
+    private FirebaseAuth maFirebaseAuth = FirebaseAuth.getInstance();
+    private FirebaseDatabase database= FirebaseDatabase.getInstance("https://narmeen-730a9-default-rtdb.europe-west1.firebasedatabase.app/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array_list);
         getSupportActionBar().hide();
+        String UID = maFirebaseAuth.getUid();
+        Toast.makeText(this, "UID:"+UID, Toast.LENGTH_LONG);
+        //build reference fo user related data in real time database suing user ID
+        DatabaseReference myRef = database.getReference("users/"+UID);
+
+        //adds an item to the FB under the reference specified
+        //TODO change this into the object you need to use (reminder / appointment)
+        //TODO alter the code so the data is uploaded to the firebase only when the user clicks the button
+        //myRef.push().setValue(new Item(2,true,"this is my first item",R.id.imageItem));
+
+
+
+
         list=new ArrayList<>();
 
         list.add(new Item("my first item",R.drawable.img,true,50));
@@ -59,22 +76,4 @@ public class ArrayListActivity extends AppCompatActivity  {
             }
         });
     }
-
-
-    //realtime database continuing code
-    private FirebaseAuth maFirebaseAuth = FirebaseAuth.getInstance();
-    FirebaseDatabase database = FirebaseDatabase.getInstance("https://sanctum-bc758-default-rtdb.europe-west1.firebasedatabase.app/");
-    String UID = maFirebaseAuth.getUid();
-    DatabaseReference myRef = database.getReference("users/"+UID);
-
-    //todo change this into the object you need to use (reminder / appointemnt)
-        myRef.push().setValue(new Item(2,true,"this is my first item",7));
-
-     //realtime data base can be used to add data that is custom to each use(in your case the
-     //user could add courses that he wants to learn)
-    myRef.addValueEventListener(new )
-
-
-
-
 }

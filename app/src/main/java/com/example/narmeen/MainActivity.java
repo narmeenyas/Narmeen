@@ -1,6 +1,10 @@
 package com.example.narmeen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentContainerView;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -12,6 +16,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -25,6 +31,13 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        //BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+       // FragmentContainerView fragmentContainerView = findViewById(R.id.fragmentContainerView);
+        //FragmentContainerView fragmentContainerView = (fragmentContainerView) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
+        //NavController navController = fragmentContainerView.getNavController();
+        //NavigationUI.setupWithNavController(bottomNavigationView, navController);
+
 
 
         //this will start the service which in turn will start the music
