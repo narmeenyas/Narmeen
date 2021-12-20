@@ -33,18 +33,13 @@ public class MainActivity extends AppCompatActivity  {
         getSupportActionBar().hide();
 
         //BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-       // FragmentContainerView fragmentContainerView = findViewById(R.id.fragmentContainerView);
-        //FragmentContainerView fragmentContainerView = (fragmentContainerView) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
-        //NavController navController = fragmentContainerView.getNavController();
+        //NavController navController = Navigation.findNavController(this,  R.id.fragmentContainerView);
         //NavigationUI.setupWithNavController(bottomNavigationView, navController);
-
 
 
         //this will start the service which in turn will start the music
         musicIntent= new Intent(this,MusicService.class);
         startService(musicIntent);
-
-
 
         Intent notifyIntent = new Intent(this,NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast
