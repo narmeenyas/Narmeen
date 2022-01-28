@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="topics fragment"
-        android:textSize="24sp"/>
+        android:textSize="24sp"
+        android:layout_centerInParent="true"
+        />
 
 </FrameLayout>
