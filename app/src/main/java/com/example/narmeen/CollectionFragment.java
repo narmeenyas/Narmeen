@@ -10,10 +10,6 @@ import androidx.fragment.app.Fragment;
 
 public class CollectionFragment extends Fragment {
 
-    public CollectionFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

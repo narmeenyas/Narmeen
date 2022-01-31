@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 
 public class TopicsFragment extends Fragment {
 
-    public TopicsFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
