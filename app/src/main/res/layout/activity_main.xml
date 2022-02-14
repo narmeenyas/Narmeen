@@ -24,8 +24,8 @@
         app:menu="@menu/bottom_navigation" />
 
 //fragment renames or what
-    //collection -
-    //premium
-    //profile
-    //topics
+    //collection - extra
+    //premium - premiu
+    //profile - profiles
+    //topics - courses
 </RelativeLayout>

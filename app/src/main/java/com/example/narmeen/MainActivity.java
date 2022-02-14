@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity  {
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 1, pendingIntent);
 
-  // navigation bar code below (needs fixing)
+  // navigation bar code below (functional)
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
