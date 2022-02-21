@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity  {
     private static final int NOTIFICATION_REMINDER_NIGHT = 1;//this is for the broadcast receiver
 
     private Intent musicIntent;
+    private CardView popular1,popular2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
