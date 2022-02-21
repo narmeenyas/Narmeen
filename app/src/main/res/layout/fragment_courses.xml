@@ -1,15 +1,422 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000066">
-//here should come the courses in card view with questions and shit
-    //
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="courses fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        ></TextView>
-</RelativeLayout>
+    android:background="#000066"
+    tools:context=".MainActivity">
+
+    // add in the titles of courses
+    //fix title
+    //fix courses colors (temp)
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Welcome to your courses"
+                android:textSize="40dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:text="Greetings"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/aes"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="40dp"
+
+                        android:layout_height="wrap_content"
+                        android:text="meow"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/what"
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:gravity="center"
+                        android:text="/////"
+
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    >
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="70dp"
+
+                        android:layout_height="wrap_content"
+                        android:text="//////"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/anxietyCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="title"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/anxietyTypes"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="meow"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/anxietyCauses"
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:gravity="center"
+                        android:text="/////"
+
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="180dp"
+                    android:layout_height="190dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/anxietyTreatment"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="70dp"
+
+                        android:layout_height="wrap_content"
+                        android:text="//////"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/emotionalEatingCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="/////"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/emotionalEatingSigns">
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="70dp"
+                        android:text="/////"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/emotionalEatingCauses"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="Why is my eating emotional?"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/idk"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="////"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/stressCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="Stress"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="200dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/stressTypes"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="40dp"
+
+                        android:text="////"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="200dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/stressCauses">
+
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="30dp"
+
+                        android:layout_height="wrap_content"
+                        android:text="////"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="200dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/stressTreatment"
+                    >
+
+                    <TextView
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="////"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>
