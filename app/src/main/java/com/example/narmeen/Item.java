@@ -3,16 +3,12 @@ package com.example.narmeen;
 public class Item {
     private String description;
     private int resid; //image id to be loaded
-    private boolean isHappy;
-    private int amount;
 
-    public Item(String description, int resid, boolean isHappy, int amount) {
+    public Item(String description, int resid) {
         this.description = description;
         this.resid = resid;
-        this.isHappy = isHappy;
-        this.amount = amount;
-    }
 
+    }
     public Item() {
 
     }
@@ -33,29 +29,11 @@ public class Item {
         this.resid = resid;
     }
 
-    public boolean isHappy() {
-        return isHappy;
-    }
-
-    public void setHappy(boolean happy) {
-        isHappy = happy;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
     @Override
     public String toString() {
         return "Item{" +
                 "description='" + description + '\'' +
                 ", resid=" + resid +
-                ", isHappy=" + isHappy +
-                ", amount=" + amount +
                 '}';
     }
 }

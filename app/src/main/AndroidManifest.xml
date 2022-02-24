@@ -27,19 +27,19 @@
             android:name=".SignupActivity"
             android:exported="true" />
         <activity
-            android:name=".PreviewActivity"
+            android:name=".ArrayListActivity"
             android:exported="true" />
         <activity
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".ArrayListActivity"
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".IntroActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".PreviewActivity"
             android:exported="true" />
         <activity
             android:name=".Welcome"

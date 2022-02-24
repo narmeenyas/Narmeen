@@ -1,13 +1,12 @@
 package com.example.narmeen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -41,14 +40,18 @@ public class ArrayListActivity extends AppCompatActivity  {
         //myRef.push().setValue(new Item(2,true,"this is my first item",R.id.imageItem));
 
 
-
+//delete amount and is happy just keep description and img
 
         list=new ArrayList<>();
 
-        list.add(new Item("my first item",R.drawable.img,true,50));
-        list.add(new Item("idk",R.drawable.img,true,34));
-        list.add(new Item("this is supposed to be a string",R.drawable.img,true,74));
-        list.add(new Item("weeeeee",R.drawable.img,true,21));
+        list.add(new Item("Spanish",R.drawable.img));
+        list.add(new Item("Italian",R.drawable.img));
+        list.add(new Item("German",R.drawable.img));
+        list.add(new Item("French",R.drawable.img));
+        list.add(new Item("Chinese",R.drawable.img));
+        list.add(new Item("Japanese",R.drawable.img));
+        list.add(new Item("Russian",R.drawable.img));
+        list.add(new Item("Turkish",R.drawable.img));
 
         //reference to the list view so it can be programmed
         myListView=findViewById(R.id.myListView);
@@ -58,22 +61,16 @@ public class ArrayListActivity extends AppCompatActivity  {
 
         //connect adapter with view
         myListView.setAdapter(myAdapter);
-        //connects click listener to items in the list
 
+        //connects click listener to items in the list
+        //when you click the item it shows the values that it has
+        //change this to redirect to main page
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
             }
         });
-        myListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                list.remove(i);
-                myAdapter.notifyDataSetChanged();
-                return false;
 
-            }
-        });
     }
 }
