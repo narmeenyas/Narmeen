@@ -1,5 +1,6 @@
 package com.example.narmeen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,9 +40,6 @@ public class ArrayListActivity extends AppCompatActivity  {
         //TODO alter the code so the data is uploaded to the firebase only when the user clicks the button
         //myRef.push().setValue(new Item(2,true,"this is my first item",R.id.imageItem));
 
-
-//delete amount and is happy just keep description and img
-
         list=new ArrayList<>();
 
         list.add(new Item("Spanish",R.drawable.img));
@@ -65,10 +63,14 @@ public class ArrayListActivity extends AppCompatActivity  {
         //connects click listener to items in the list
         //when you click the item it shows the values that it has
         //change this to redirect to main page
-        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+       myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
+             //   Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(ArrayListActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 

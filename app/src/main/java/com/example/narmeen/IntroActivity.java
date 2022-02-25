@@ -1,12 +1,12 @@
 package com.example.narmeen;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class IntroActivity extends AppCompatActivity {
 
@@ -30,7 +30,7 @@ public class IntroActivity extends AppCompatActivity {
                 Toast.makeText(IntroActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.exitMenu:
-            // closeApplication();
+       //      closeApplication();
                 break;
         }
         return super.onOptionsItemSelected(item);

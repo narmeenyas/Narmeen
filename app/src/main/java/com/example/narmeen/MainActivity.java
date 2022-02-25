@@ -19,13 +19,16 @@ public class MainActivity extends AppCompatActivity  {
     private static final int NOTIFICATION_REMINDER_NIGHT = 1;//this is for the broadcast receiver
 
     private Intent musicIntent;
-    private CardView popular1,popular2;
+    private CardView helloCard,morningCard, basicCard,foodCard,drinksCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        basicCard = findViewById(R.id.basicCard);
+        helloCard = findViewById(R.id.helloCard);
 
 
         //this will start the service which in turn will start the music
@@ -43,6 +46,18 @@ public class MainActivity extends AppCompatActivity  {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
+
+    /*    helloCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(MainActivity.this,DetailActivity.class);
+                i.putExtra("name","Spanish");
+                startActivity(i);
+            }
+        });
+
+     */
+
     }
   private BottomNavigationView.OnNavigationItemSelectedListener navListener =
           new BottomNavigationView.OnNavigationItemSelectedListener() {

@@ -65,7 +65,7 @@
                     android:layout_marginTop="20dp"
                     android:backgroundTint="#ff8533"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/aes"
+                    android:id="@+id/helloCard"
                     >
 
                     <TextView
@@ -81,14 +81,16 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/what"
+                    android:id="@+id/morningCard"
                     android:layout_width="180dp"
                     android:layout_height="190dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
+                    android:backgroundTint="#ff8533"
                     android:textAlignment="center"
                     app:cardCornerRadius="20dp"
-                    android:backgroundTint="#ff8533">
+
+                    >
 
                     <TextView
                         android:layout_width="150dp"
@@ -96,9 +98,9 @@
                         android:layout_marginTop="40dp"
                         android:gravity="center"
                         android:text="Good Morning"
+                        android:textColor="#000000"
                         android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
+                        android:textStyle="bold" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -110,6 +112,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:backgroundTint="#ff8533"
+                    android:id="@+id/basicCard"
                     >
                     <TextView
                         android:textSize="24dp"
@@ -162,7 +165,7 @@
                     android:textAlignment="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/anxietyTypes"
+                    android:id="@+id/foodCard"
                     android:backgroundTint="#bf4040"
                     >
 
@@ -179,7 +182,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/anxietyCauses"
+                    android:id="@+id/drinksCard"
                     android:layout_width="180dp"
                     android:layout_height="190dp"
                     android:layout_marginLeft="10dp"
@@ -201,7 +204,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/anxietCauses"
+                    android:id="@+id/foodmoreCard"
                     android:layout_width="180dp"
                     android:layout_height="190dp"
                     android:layout_marginLeft="10dp"

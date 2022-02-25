@@ -1,18 +1,17 @@
 package com.example.narmeen;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.FileNotFoundException;
 
@@ -25,7 +24,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private Button buttonGallery;
     private ImageView imageViewProfile;
 
-    private Bitmap pic;//bitmap is a type of a picture memorieser which is built like
+    private Bitmap pic;//bitmap is a type of a picture memoriser which is built like
     // a table and saves every pixel as a color in the table
     @Override
     protected void onCreate(Bundle savedInstanceState) {
