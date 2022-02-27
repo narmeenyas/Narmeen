@@ -42,13 +42,13 @@
             android:name=".IntroActivity"
             android:exported="true" />
         <activity
-            android:name=".PreviewActivity"
+            android:name=".ArrayListActivity"
             android:exported="true" />
         <activity
             android:name=".Welcome"
             android:exported="true" />
         <activity
-            android:name=".ArrayListActivity"
+            android:name=".PreviewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

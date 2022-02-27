@@ -42,14 +42,14 @@ public class ArrayListActivity extends AppCompatActivity  {
 
         list=new ArrayList<>();
 
-        list.add(new Item("Spanish",R.drawable.img));
-        list.add(new Item("Italian",R.drawable.img));
-        list.add(new Item("German",R.drawable.img));
-        list.add(new Item("French",R.drawable.img));
-        list.add(new Item("Chinese",R.drawable.img));
-        list.add(new Item("Japanese",R.drawable.img));
-        list.add(new Item("Russian",R.drawable.img));
-        list.add(new Item("Turkish",R.drawable.img));
+        list.add(new Item("Spanish",R.drawable.ss));
+        list.add(new Item("Italian",R.drawable.italian));
+        list.add(new Item("German",R.drawable.german));
+        list.add(new Item("French",R.drawable.french));
+        list.add(new Item("Chinese",R.drawable.chinese));
+        list.add(new Item("Japanese",R.drawable.japanese));
+        list.add(new Item("Russian",R.drawable.russian));
+        list.add(new Item("Turkish",R.drawable.turkish));
 
         //reference to the list view so it can be programmed
         myListView=findViewById(R.id.myListView);

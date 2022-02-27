@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity  {
     private static final int NOTIFICATION_REMINDER_NIGHT = 1;//this is for the broadcast receiver
 
     private Intent musicIntent;
-    private CardView helloCard,morningCard, basicCard,foodCard,drinksCard;
+    private  CardView helloCard;
+    private CardView morningCard, basicCard,foodCard,drinksCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity  {
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
 
-    /*    helloCard.setOnClickListener(new View.OnClickListener() {
+     /*  helloCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i= new Intent(MainActivity.this,DetailActivity.class);
@@ -56,8 +57,7 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
-     */
-
+      */
     }
   private BottomNavigationView.OnNavigationItemSelectedListener navListener =
           new BottomNavigationView.OnNavigationItemSelectedListener() {
