@@ -35,6 +35,7 @@ public class ArrayListActivity extends AppCompatActivity  {
         //build reference fo user related data in real time database suing user ID
         DatabaseReference myRef = database.getReference("users/"+UID);
 
+
         //adds an item to the FB under the reference specified
         //TODO change this into the object you need to use (reminder / appointment)
         //TODO alter the code so the data is uploaded to the firebase only when the user clicks the button
@@ -53,6 +54,8 @@ public class ArrayListActivity extends AppCompatActivity  {
 
         //reference to the list view so it can be programmed
         myListView=findViewById(R.id.myListView);
+
+        myListView.setDivider(null);
 
         //connect adapter with data
         myAdapter=new CustomAdapter(this,R.layout.item_row,list);
