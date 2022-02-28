@@ -17,7 +17,6 @@
         android:textColor="#ffffff"
         android:textSize="40sp"
         android:textStyle="bold"
-
         />
 
     <EditText
@@ -66,7 +65,7 @@
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#ffaa00"
         android:hint="login"
