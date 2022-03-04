@@ -7,7 +7,6 @@
     android:background="@drawable/courses_background"
     tools:context=".MainActivity">
 
-    //fix courses colors (temp)
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -19,11 +18,11 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="250dp"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="Welcome to your courses!"
+                android:text="What would you like to learn today?"
                 android:textColor="#ffffff"
                 android:textSize="40dp"
                 android:textStyle="bold" />
@@ -39,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="20dp"
-                android:text="Greetings"
+                android:text="Most popular"
                 android:textColor="#FFFFFF"
                 android:textSize="25dp"
                 android:textStyle="bold" />
@@ -58,25 +57,38 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/helloCard"
                     app:cardCornerRadius="20dp"
                     android:layout_width="180dp"
                     android:layout_height="190dp"
                     android:textAlignment="center"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="#ff8533"
+                    android:backgroundTint="#d27979"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/helloCard"
-                    >
 
-                    <TextView
-                        android:textSize="24dp"
+                    >
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/handshake"
+                            />
+
+                        <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="22dp"
                         android:textStyle="bold"
                         android:gravity="center"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_height="wrap_content"
-                        android:text="Hello"
+                        android:text="Hello & Goodbye"
                         android:textColor="#000000"/>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -86,21 +98,33 @@
                     android:layout_height="190dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="#ff8533"
+                    android:backgroundTint="#d27979"
                     android:textAlignment="center"
                     app:cardCornerRadius="20dp"
-
                     >
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
-                        android:gravity="center"
-                        android:text="Good Morning"
-                        android:textColor="#000000"
-                        android:textSize="24dp"
-                        android:textStyle="bold" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/morning"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="Good morning"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -112,18 +136,29 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:backgroundTint="#ff8533"
-                    android:id="@+id/basicCard"
                     >
-                    <TextView
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_height="wrap_content"
-                        android:text="Basic Conversation"
-                        android:textColor="#000000"
-                        />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/chatting"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="Basic Chat"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -168,16 +203,29 @@
                     android:id="@+id/foodCard"
                     android:backgroundTint="#bf4040"
                     >
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_height="wrap_content"
-                        android:text="Food"
-                        android:textColor="#000000"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/food"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="24dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="foods"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -191,15 +239,29 @@
                     app:cardCornerRadius="20dp"
                     android:backgroundTint="#bf4040">
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
-                        android:gravity="center"
-                        android:text="Drinks"
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/drinks"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="24dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="drinks"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -213,114 +275,29 @@
                     app:cardCornerRadius="20dp"
                     android:backgroundTint="#bf4040">
 
-                    <TextView
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
-                        android:gravity="center"
-                        android:text="More Foods"
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                </androidx.cardview.widget.CardView>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/turkish"
 
-            </LinearLayout>
+                            />
 
-        </HorizontalScrollView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="24dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="more foods"
+                            android:textColor="#000000"/>
 
-        <RelativeLayout
-            android:id="@+id/emotionalEatingCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="380dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
-                android:text="Family"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <HorizontalScrollView
-            android:layout_marginLeft="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="20dp"
-                    android:layout_width="180dp"
-                    android:layout_height="190dp"
-                    android:textAlignment="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/emotionalEatingSigns">
-
-                    <TextView
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="70dp"
-                        android:text="Family Tree"
-                        android:layout_height="wrap_content"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="20dp"
-                    android:layout_width="180dp"
-                    android:layout_height="190dp"
-                    android:textAlignment="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/emotionalEatingCauses"
-                    >
-
-                    <TextView
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="Why is my eating emotional?"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="20dp"
-                    android:layout_width="180dp"
-                    android:layout_height="190dp"
-                    android:textAlignment="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:id="@+id/idk"
-                    >
-
-                    <TextView
-                        android:textSize="24dp"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_height="wrap_content"
-                        android:text="////"/>
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 

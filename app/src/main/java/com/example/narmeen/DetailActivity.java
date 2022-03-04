@@ -18,11 +18,7 @@ public class DetailActivity extends AppCompatActivity {
         String name =getIntent().getStringExtra("name");
         loadContentByName(name);
 
-
-
-
     }
-
     public void loadContentByName(String name){
         if(name.equals("German")){
         }else if(name.equals("Spanish")){
