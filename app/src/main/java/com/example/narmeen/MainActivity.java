@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,13 +29,24 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-        basicCard = findViewById(R.id.basicCard);
+       // basicCard = findViewById(R.id.basicCard);
         helloCard = findViewById(R.id.helloCard);
 
-
+           helloCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(MainActivity.this, DetailActivity.class);
+                i.putExtra("name","helloCard");
+                startActivity(i);
+            }
+        });
         //this will start the service which in turn will start the music
         musicIntent= new Intent(this,MusicService.class);
         startService(musicIntent);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
 
         Intent notifyIntent = new Intent(this,NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast
@@ -42,22 +54,6 @@ public class MainActivity extends AppCompatActivity  {
         AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 1, pendingIntent);
-
-         /*  helloCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i= new Intent(MainActivity.this,DetailActivity.class);
-                i.putExtra("name","Spanish");
-                startActivity(i);
-            }
-        });
-
-      */
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
-
     }
   private BottomNavigationView.OnNavigationItemSelectedListener navListener =
           new BottomNavigationView.OnNavigationItemSelectedListener() {

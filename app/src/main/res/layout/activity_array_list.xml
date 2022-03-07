@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#0033cc"
     tools:context=".ArrayListActivity">
 
     <TextView
         android:id="@+id/textViewDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginLeft="15dp"
         android:text="Pick a Language!"
+        android:textColor="#FFFFFF"
         android:textSize="21sp" />
     <ListView
         android:layout_marginTop="60dp"
