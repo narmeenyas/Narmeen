@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity  {
 
     private Intent musicIntent;
     private  CardView helloCard;
-    private CardView morningCard, basicCard,foodCard,drinksCard;
+    private CardView morningCard, chatCard,foodCard,drinksCard,foodmoreCard;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,12 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-       // basicCard = findViewById(R.id.basicCard);
+
         helloCard = findViewById(R.id.helloCard);
+        chatCard = findViewById(R.id.chatCard);
+        foodCard= findViewById(R.id.foodCard);
+        drinksCard= findViewById(R.id.drinksCard);
+        foodmoreCard= findViewById(R.id.foodmoreCard);
 
            helloCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(i);
             }
         });
+
         //this will start the service which in turn will start the music
         musicIntent= new Intent(this,MusicService.class);
         startService(musicIntent);
@@ -55,6 +61,7 @@ public class MainActivity extends AppCompatActivity  {
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
                 1000 * 60 * 1, pendingIntent);
     }
+
   private BottomNavigationView.OnNavigationItemSelectedListener navListener =
           new BottomNavigationView.OnNavigationItemSelectedListener() {
               @Override
@@ -79,6 +86,4 @@ public class MainActivity extends AppCompatActivity  {
 
               }
           };
-    //see the quiz video resource 13:11 - this makes the option chosen highlighted which could be useful in
-    //multiple answer questions
 }

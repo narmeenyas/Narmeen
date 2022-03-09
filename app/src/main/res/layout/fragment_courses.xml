@@ -128,6 +128,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/chatCard"
                     app:cardCornerRadius="20dp"
                     android:layout_width="180dp"
                     android:layout_height="190dp"
@@ -193,13 +194,13 @@
                 android:layout_height="wrap_content">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/foodCard"
                     app:cardCornerRadius="20dp"
                     android:layout_width="180dp"
                     android:layout_height="190dp"
                     android:textAlignment="center"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/foodCard"
                     android:backgroundTint="#d27979"
                     >
                     <LinearLayout
