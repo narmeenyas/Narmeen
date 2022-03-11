@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvFileContent"
+        android:id="@+id/courseContent"
         android:textSize="24dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:text="TextView"
         />
+
 </LinearLayout>

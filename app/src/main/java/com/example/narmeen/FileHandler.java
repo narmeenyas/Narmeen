@@ -12,6 +12,7 @@ public class FileHandler {
     private String fileName;
     private Context context;
     private String content;
+    //maybe here we could add a video property and have it run from the detail activity
 
 
     public FileHandler(String fileName,Context context){

@@ -1,25 +1,33 @@
 package com.example.narmeen;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
 
-  //  Item item= new Item();
-
+    private TextView courseContent;
     private FileHandler fileHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        getSupportActionBar().hide();
 
+
+        courseContent = findViewById(R.id.courseContent);
       //  String description = item.getDescription();
 
         String name =getIntent().getStringExtra("name");
         loadContentByName(name);
 
+        if(fileHandler != null )
+        {
+            courseContent.setText(fileHandler.getContent());
+            //here i could put vid instead of text
+        }
     }
     //in the onclick in the main it sends the value of the card to this page(name)
     //the extra intent is what moves the values from activities
@@ -50,7 +58,6 @@ public class DetailActivity extends AppCompatActivity {
         }else if(name.equals("foodmoreCard")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
-
         }
     }
 }

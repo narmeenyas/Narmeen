@@ -30,6 +30,8 @@ public class ArrayListActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array_list);
         getSupportActionBar().hide();
+
+
         String UID = maFirebaseAuth.getUid();
         Toast.makeText(this, "UID:"+UID, Toast.LENGTH_LONG);
         //build reference fo user related data in real time database suing user ID
