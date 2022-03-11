@@ -14,17 +14,70 @@ import androidx.fragment.app.Fragment;
 
 public class CoursesFragment  extends Fragment implements DialogInterface.OnClickListener {
 
-    private Intent musicIntent;
     private CardView helloCard;
-    private CardView morningCard, basicCard,foodCard,drinksCard;
+    private CardView morningCard, chatCard,foodCard,drinksCard,foodmoreCard;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_courses,container, false);
+        View v= inflater.inflate(R.layout.fragment_courses,container, false);
+        helloCard=(CardView) v.findViewById(R.id.helloCard);
 
-        
+        return v;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        helloCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name","helloCard");
+                startActivity(i);
+            }
+        });
+        morningCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name","morningCard");
+                startActivity(i);
+            }
+        });
+        chatCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name","chatCard");
+                startActivity(i);
+            }
+        });
+        foodCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name","foodCard");
+                startActivity(i);
+            }
+        });
+        drinksCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name","drinksCard");
+                startActivity(i);
+            }
+        });
+        foodmoreCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name","foodmoreCard");
+                startActivity(i);
+            }
+        });
+    }
 
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
