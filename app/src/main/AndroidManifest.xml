@@ -14,9 +14,6 @@
         <activity
             android:name=".DetailActivity"
             android:exported="true" />
-        <activity
-            android:name=".SlidesActivity"
-            android:exported="true" />
 
         <service
             android:name=".NotificationIntentService"
@@ -44,9 +41,7 @@
         <activity
             android:name=".PreviewActivity"
             android:exported="true" />
-        <activity
-            android:name=".Welcome"
-            android:exported="true" />
+
         <activity
             android:name=".ArrayListActivity"
             android:exported="true">

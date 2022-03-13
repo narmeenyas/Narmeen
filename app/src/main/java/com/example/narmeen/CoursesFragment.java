@@ -28,6 +28,7 @@ public class CoursesFragment  extends Fragment {
         foodmoreCard = (CardView) v.findViewById(R.id.foodmoreCard);
 
         return v;
+
     }
 
     @Override

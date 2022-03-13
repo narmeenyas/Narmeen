@@ -73,8 +73,9 @@ public class ArrayListActivity extends AppCompatActivity  {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-             //   Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
+             // Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ArrayListActivity.this,MainActivity.class);
+                intent.putExtra("id",list.get(i).getDescription()); //this is what language was chosen
                 startActivity(intent);
             }
         });

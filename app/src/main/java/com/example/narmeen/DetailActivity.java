@@ -22,6 +22,9 @@ public class DetailActivity extends AppCompatActivity {
 
         String name =getIntent().getStringExtra("name");
         loadContentByName(name);
+        String id=getIntent().getStringExtra("id");
+        loadContentByName(id);
+
 
         if(fileHandler != null )
         {
