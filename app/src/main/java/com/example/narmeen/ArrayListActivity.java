@@ -66,8 +66,7 @@ public class ArrayListActivity extends AppCompatActivity  {
         myListView.setAdapter(myAdapter);
 
         //connects click listener to items in the list
-        //when you click the item it shows the values that it has
-        //change this to redirect to main page
+
 
        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -75,11 +74,9 @@ public class ArrayListActivity extends AppCompatActivity  {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
              // Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(ArrayListActivity.this,MainActivity.class);
-                intent.putExtra("id",list.get(i).getDescription()); //this is what language was chosen
+             //   intent.putExtra("id",list.get(i).getDescription()); //this is what language was chosen
                 startActivity(intent);
             }
         });
-
-
     }
 }
