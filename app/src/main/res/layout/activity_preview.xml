@@ -10,12 +10,12 @@
     android:gravity="center">
 
  <TextView
-     android:layout_width="187dp"
+     android:layout_width="wrap_content"
      android:layout_height="wrap_content"
-     android:text="Welcome"
+     android:text="Welcome to Lingua"
+     android:layout_marginTop="30dp"
      android:textColor="#ffffff"
-     android:textSize="40sp"
-     android:textStyle="bold"/>
+     android:textSize="40sp" />
 
  <pl.droidsonroids.gif.GifImageView
 
