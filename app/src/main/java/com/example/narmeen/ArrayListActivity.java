@@ -16,12 +16,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class ArrayListActivity extends AppCompatActivity  {
+    public static String lang;
+    public static int pos;
     //the object of the view - design
     private ListView myListView;
     //the object for the adapter connecting the data to the view
     private CustomAdapter myAdapter;
     //object containing the items to be displayed - Data
-    private ArrayList<Item> list;
+    public static ArrayList<Item> list;
     private FirebaseAuth maFirebaseAuth = FirebaseAuth.getInstance();
     private FirebaseDatabase database= FirebaseDatabase.getInstance("https://narmeen-730a9-default-rtdb.europe-west1.firebasedatabase.app/");
 
@@ -30,6 +32,7 @@ public class ArrayListActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array_list);
         getSupportActionBar().hide();
+        lang="";
 
 
         String UID = maFirebaseAuth.getUid();
@@ -73,10 +76,17 @@ public class ArrayListActivity extends AppCompatActivity  {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
              // Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
+               // lang=(String) list.get(i).getDescription();
+                pos=i;
+              //  Toast.makeText(ArrayListActivity.this, "the language is " + lang , Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ArrayListActivity.this,MainActivity.class);
-             //   intent.putExtra("id",list.get(i).getDescription()); //this is what language was chosen
                 startActivity(intent);
             }
         });
+
+
+
     }
+
+
 }

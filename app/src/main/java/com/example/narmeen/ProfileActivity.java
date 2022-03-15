@@ -6,10 +6,14 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -71,5 +75,24 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        //bring xml and put it on the activity
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.settingsMenu:
+                Toast.makeText(ProfileActivity.this, "Settings", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.exitMenu:
+                //      closeApplication();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

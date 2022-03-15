@@ -25,13 +25,14 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/moveToProf"
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:layout_alignParentRight="true"
-        android:onClick=""
+
         android:drawableStart="@drawable/ic_baseline_photo_camera_24" />
 
 </RelativeLayout>

@@ -9,6 +9,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private TextView courseContent;
     private FileHandler fileHandler;
+    private String language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +17,13 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         getSupportActionBar().hide();
 
+        //this is the language that was clicked in the arraylist
+        language=ArrayListActivity.list.get(ArrayListActivity.pos).getDescription();
 
         courseContent = findViewById(R.id.courseContent);
-      //  String description = item.getDescription();
 
         String name =getIntent().getStringExtra("name");
         loadContentByName(name);
-
-
 
         if(fileHandler != null )
         {
@@ -31,35 +31,199 @@ public class DetailActivity extends AppCompatActivity {
             //here i could put vid instead of text
         }
     }
-    //in the onclick in the main it sends the value of the card to this page(name)
-    //the extra intent is what moves the values from activities
-    //we need to also get the description which is the language name from the list
-    //which makes 6 categories for each language
-
     public void loadContentByName(String name){
-        if(name.equals("helloCard")){
+        if(name.equals("helloCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
-        }else if(name.equals("morningCard")){
+        }else if(name.equals("helloCard")&&language.equals("Spanish")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("helloCard")&&language.equals("Turkish")){
+            fileHandler = new FileHandler("Turkish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("helloCard")&&language.equals("Italian")){
+            fileHandler = new FileHandler("Italian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("helloCard")&&language.equals("French")){
+            fileHandler = new FileHandler("French", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("helloCard")&&language.equals("Japanese")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("helloCard")&&language.equals("Chinese")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        } else if(name.equals("helloCard")&&language.equals("Russian")){
+            fileHandler = new FileHandler("Russian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
-        }else if(name.equals("chatCard")){
+        }else if(name.equals("morningCard")&&language.equals("Spanish")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("Turkish")){
+            fileHandler = new FileHandler("Turkish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("French")){
+            fileHandler = new FileHandler("French", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("Italian")){
+            fileHandler = new FileHandler("Italian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("Russian")){
+            fileHandler = new FileHandler("Russian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("Chinese")){
+            fileHandler = new FileHandler("Chinese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("morningCard")&&language.equals("Japanese")){
+            fileHandler = new FileHandler("Japanese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
-        }else if(name.equals("foodCard")){
+        }else if(name.equals("chatCard")&& language.equals("Spanish")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("Turkish")){
+            fileHandler = new FileHandler("Turkish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("Chinese")){
+            fileHandler = new FileHandler("Chinese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("Japanese")){
+            fileHandler = new FileHandler("Japanese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("French")){
+            fileHandler = new FileHandler("French", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("Italian")){
+            fileHandler = new FileHandler("Italian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("chatCard")&& language.equals("Russian")){
+            fileHandler = new FileHandler("Russian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
-        }else if(name.equals("drinksCard")){
+        }else if(name.equals("foodCard")&&language.equals("Spanish")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("Turkish")){
+            fileHandler = new FileHandler("Turkish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("French")){
+            fileHandler = new FileHandler("French", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("Italian")){
+            fileHandler = new FileHandler("Italian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("Japanese")){
+            fileHandler = new FileHandler("Japanese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("Chinese")){
+            fileHandler = new FileHandler("Chinese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodCard")&&language.equals("Russian")){
+            fileHandler = new FileHandler("Russian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
-        }else if(name.equals("foodmoreCard")){
+        }else if(name.equals("drinksCard")&&language.equals("Spanish")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("Turkish")){
+            fileHandler = new FileHandler("Turkish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("French")){
+            fileHandler = new FileHandler("French", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("Italian")){
+            fileHandler = new FileHandler("Italian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("Russian")){
+            fileHandler = new FileHandler("Russian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("Chinese")){
+            fileHandler = new FileHandler("Chinese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("drinksCard")&&language.equals("Japanese")){
+            fileHandler = new FileHandler("Japanese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("Spanish")){
+            fileHandler = new FileHandler("Spanish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("French")){
+            fileHandler = new FileHandler("French", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("Italian")){
+            fileHandler = new FileHandler("Italian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("Turkish")){
+            fileHandler = new FileHandler("Turkish", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("Russian")){
+            fileHandler = new FileHandler("Russian", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("Chinese")){
+            fileHandler = new FileHandler("Chinese", this);
+            fileHandler.readFile();
+
+        }else if(name.equals("foodmoreCard")&&language.equals("Japanese")){
+            fileHandler = new FileHandler("Japanese", this);
+            fileHandler.readFile();
+
         }
     }
 }
