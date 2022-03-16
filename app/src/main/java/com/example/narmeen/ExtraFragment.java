@@ -1,6 +1,5 @@
 package com.example.narmeen;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +17,8 @@ public class ExtraFragment extends Fragment  {
         View rootView = inflater.inflate(R.layout.fragment_extra,container, false);
 
         VideoView view = (VideoView)rootView.findViewById(R.id.video_view);
-        String path = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.;
-        view.setVideoURI(Uri.parse(path));
+       // String path = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.;
+     //   view.setVideoURI(Uri.parse(path));
         view.start();
 
         return rootView;
