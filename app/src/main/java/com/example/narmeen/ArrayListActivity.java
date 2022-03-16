@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 public class ArrayListActivity extends AppCompatActivity  {
-    public static String lang;
+
     public static int pos;
     //the object of the view - design
     private ListView myListView;
@@ -32,7 +32,6 @@ public class ArrayListActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_array_list);
         getSupportActionBar().hide();
-        lang="";
 
 
         String UID = maFirebaseAuth.getUid();
@@ -75,10 +74,7 @@ public class ArrayListActivity extends AppCompatActivity  {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-             // Toast.makeText(getApplicationContext(),"Item:"+list.get(i),Toast.LENGTH_LONG).show();
-               // lang=(String) list.get(i).getDescription();
                 pos=i;
-              //  Toast.makeText(ArrayListActivity.this, "the language is " + lang , Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ArrayListActivity.this,MainActivity.class);
                 startActivity(intent);
             }

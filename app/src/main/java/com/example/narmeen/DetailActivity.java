@@ -29,6 +29,8 @@ public class DetailActivity extends AppCompatActivity {
         {
             courseContent.setText(fileHandler.getContent());
             //here i could put vid instead of text
+            //make file type java or dunno
+            //put set video to the vid that is there
         }
     }
     public void loadContentByName(String name){
