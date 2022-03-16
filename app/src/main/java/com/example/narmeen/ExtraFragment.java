@@ -1,13 +1,11 @@
 package com.example.narmeen;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,30 +15,18 @@ public class ExtraFragment extends Fragment  {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_extra,container, false);
+        View rootView = inflater.inflate(R.layout.fragment_extra,container, false);
+
+        VideoView view = (VideoView)rootView.findViewById(R.id.video_view);
+        String path = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.howtopray;
+        view.setVideoURI(Uri.parse(path));
+        view.start();
+
+        return rootView;
     }
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
-        super.onCreate(savedInstanceState);
-    }
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu,menu);
-        //bring xml and put it on the activity
-         super.onCreateOptionsMenu(menu, inflater);
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.settingsMenu:
-                Toast.makeText(getActivity(), "Settings", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.exitMenu:
-                //closeApplication();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+
+
+
+
 }

@@ -11,4 +11,10 @@
         android:textSize="30sp"
         android:layout_centerInParent="true"
         ></TextView>
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
 </RelativeLayout>
