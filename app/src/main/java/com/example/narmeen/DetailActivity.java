@@ -1,14 +1,17 @@
 package com.example.narmeen;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private TextView courseContent;
-    private FileHandler fileHandler;
+    private TextView courseContent, courseTitle;
+    private FileHandler fileHandler, fileHandler2;
     private String language;
 
     @Override
@@ -21,6 +24,7 @@ public class DetailActivity extends AppCompatActivity {
         language=ArrayListActivity.list.get(ArrayListActivity.pos).getDescription();
 
         courseContent = findViewById(R.id.courseContent);
+      //  courseTitle= findViewById(R.id.courseTitle);
 
         String name =getIntent().getStringExtra("name");
         loadContentByName(name);
@@ -28,15 +32,23 @@ public class DetailActivity extends AppCompatActivity {
         if(fileHandler != null )
         {
             courseContent.setText(fileHandler.getContent());
-            //here i could put vid instead of text
-            //make file type java or dunno
-            //put set video to the vid that is there
+           // courseTitle.setText(fileHandler2.getContent());
         }
     }
     public void loadContentByName(String name){
         if(name.equals("helloCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
+            //adding a suitable video
+
+            VideoView videoView = findViewById(R.id.video_view1);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
 
         }else if(name.equals("helloCard")&&language.equals("Spanish")){
             fileHandler = new FileHandler("Spanish", this);
@@ -70,6 +82,15 @@ public class DetailActivity extends AppCompatActivity {
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
+            VideoView videoView = findViewById(R.id.video_view1);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+
         }else if(name.equals("morningCard")&&language.equals("Spanish")){
             fileHandler = new FileHandler("Spanish", this);
             fileHandler.readFile();
@@ -101,6 +122,15 @@ public class DetailActivity extends AppCompatActivity {
         }else if(name.equals("chatCard")&& language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
+
+            VideoView videoView = findViewById(R.id.video_view1);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
 
         }else if(name.equals("chatCard")&& language.equals("Spanish")){
             fileHandler = new FileHandler("Spanish", this);
@@ -134,6 +164,15 @@ public class DetailActivity extends AppCompatActivity {
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
+            VideoView videoView = findViewById(R.id.video_view1);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+
         }else if(name.equals("foodCard")&&language.equals("Spanish")){
             fileHandler = new FileHandler("Spanish", this);
             fileHandler.readFile();
@@ -166,6 +205,15 @@ public class DetailActivity extends AppCompatActivity {
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
 
+            VideoView videoView = findViewById(R.id.video_view1);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+
         }else if(name.equals("drinksCard")&&language.equals("Spanish")){
             fileHandler = new FileHandler("Spanish", this);
             fileHandler.readFile();
@@ -197,6 +245,15 @@ public class DetailActivity extends AppCompatActivity {
         }else if(name.equals("foodmoreCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
+
+            VideoView videoView = findViewById(R.id.video_view1);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
 
         }else if(name.equals("foodmoreCard")&&language.equals("Spanish")){
             fileHandler = new FileHandler("Spanish", this);
