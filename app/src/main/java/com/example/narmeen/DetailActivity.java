@@ -24,7 +24,6 @@ public class DetailActivity extends AppCompatActivity {
         language=ArrayListActivity.list.get(ArrayListActivity.pos).getDescription();
 
         courseContent = findViewById(R.id.courseContent);
-      //  courseTitle= findViewById(R.id.courseTitle);
 
         String name =getIntent().getStringExtra("name");
         loadContentByName(name);
@@ -32,14 +31,13 @@ public class DetailActivity extends AppCompatActivity {
         if(fileHandler != null )
         {
             courseContent.setText(fileHandler.getContent());
-           // courseTitle.setText(fileHandler2.getContent());
         }
     }
     public void loadContentByName(String name){
         if(name.equals("helloCard")&&language.equals("German")){
             fileHandler = new FileHandler("German", this);
             fileHandler.readFile();
-            //adding a suitable video
+
 
             VideoView videoView = findViewById(R.id.video_view1);
             String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.germano;
